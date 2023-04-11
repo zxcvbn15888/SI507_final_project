@@ -1,4 +1,7 @@
-
+import json
+import requests
+import os
+import sys
 
 def isAnswer(ans):
     '''indicate if the answer is true or false
@@ -91,9 +94,28 @@ def loadTree(treeFile):
     
     return (root, left, right)
 
+def fetch_data_with_cache(url, json_cache, params = None, json_list = []) :
+    json_data = None
+    try:
+        with open(os.path.join(sys.path[0], json_cache), 'r') as file:
+            json_data = json.load(file)
+            for i in json_data:
+                if i["input"]["lat"] == params["lat"] and i["input"]["lon"] == params["lon"]:
+                    print("Loading data from cache")
+                    return i
+    except:
+        print('No cache file found!')
+    print('Loading data form web')
+    if params:
+        json_data = requests.get(url, params=params).json()
+    else:
+        json_data = requests.get(url).json()
+    json_list.append(json_data)
+    return json_data
 
 def main():
     pass
+    # json_cache = 'cache.json'
 
 if __name__ == '__main__':
     main()

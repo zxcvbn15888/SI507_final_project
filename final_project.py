@@ -125,7 +125,7 @@ def SearchMovie():
 
     print(tree[0])
     while True:
-        userInput1 = input("Please enter 1, 2 or 'exit':(1)<=2000 (2)>2000\n")
+        userInput1 = input("Please enter 1, 2 or 'exit':(1)released before 2000 (2)released after 2000\n")
         if userInput1 == "exit":
             print("Bye!")
             quit()
@@ -137,7 +137,7 @@ def SearchMovie():
                 Tree2 = getNext(tree, userInput1)
                 print(Tree2[0])
                 while True:
-                    userInput2 = input("Please enter 1, 2, 3, back or exit:(1)<=40 min (2)40~60 min (3)>60 min\n")
+                    userInput2 = input("Please enter 1, 2, 3, back or exit:(1)less than 40 min (2)40~60 min (3)longer than 60 min\n")
                     if userInput2 == "exit":
                         print("Bye!")
                         quit()
@@ -205,11 +205,6 @@ def SearchMovie():
                                                     print("The poster of the movie: ")
                                                     print(movieList[int(userInput4)-1]["Poster"])
                                                     
-                                                    if movieList[int(userInput4)-1]["Poster"] == "N/A":
-                                                        print("There is no poster of this movie.")
-                                                    else:
-                                                        webbrowser.open(movieList[int(userInput4)-1]["Poster"], new=2)
-                                                    print()
 
                                                     while True:
                                                         print("Do you want to save this movie's info into json file?")

@@ -25,21 +25,21 @@ def sortGenre(movie, runtime, year):
        "Mystery" not in movie["Genre"] and "Fantasy" not in movie["Genre"] and "Thriller" not in movie["Genre"]:
        tree[runtime][year][10].append(movie)
 
-tree = ['Please choose one kind of released years of the movie:', 
+tree = ['Please choose one kind of time period the movie may be released:', 
          ['Please choose one kind of runtime of the movie:', 
-           ['Please choosing one kind of genre of the movie:', 
+           ['Please choosing one kind of movie genres you want to search:', 
             [],[],[],[],[],[],[],[],[],[]], 
-           ['Please choosing one kind of genre of the movie:', 
+           ['Please choosing one kind of movie genres you want to search:', 
             [],[],[],[],[],[],[],[],[],[]],
-           ['Please choosing one kind of genre of the movie:', 
+           ['Please choosing one kind of movie genres you want to search:', 
             [],[],[],[],[],[],[],[],[],[]]
          ], 
          ['Please choose one kind of runtime of the movie:', 
-           ['Please choosing one kind of genre of the movie:', 
+           ['Please choosing one kind of movie genres you want to search:', 
             [],[],[],[],[],[],[],[],[],[]], 
-           ['Please choosing one kind of genre of the movie:', 
+           ['Please choosing one kind of movie genres you want to search:', 
             [],[],[],[],[],[],[],[],[],[]],
-           ['Please choosing one kind of genre of the movie:', 
+           ['Please choosing one kind of movie genres you want to search:', 
             [],[],[],[],[],[],[],[],[],[]]
          ]
        ]

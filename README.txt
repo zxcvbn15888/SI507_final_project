@@ -6,3 +6,7 @@ A: Just run the final_project.py.
 
 3. How to search more movies?
 A: In line 17 of cache.py file, you can change the range of i, which I set default number is 1285016 to 1286016, since the free api key has a 1000 daily limit access times. If you have an unlimited api key, you can change this range to any number you like.
+
+Required packages:
+json
+requests
